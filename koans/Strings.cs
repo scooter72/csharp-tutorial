@@ -63,6 +63,19 @@ namespace koans
         }
 
         [TestMethod]
+        public void TestStringConcatenationLeavesOriginalStringUnModified()
+        {
+            string str1 = "Hello ";
+            string str2 = "World";
+            string concat = str1 + str2;
+
+
+
+            Assert.AreEqual(str1, string.Empty);
+            Assert.AreEqual(str2, string.Empty);
+        }
+
+        [TestMethod]
         public void TestStringCharIndex()
         {
             string str1 = "abcd";
