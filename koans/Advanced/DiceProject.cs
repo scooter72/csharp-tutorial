@@ -2,7 +2,7 @@
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace koans.Advanced
+namespace Koans.Advanced
 {
     [TestClass]
     public class DiceProject

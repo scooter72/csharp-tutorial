@@ -2,7 +2,7 @@
 using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace koans.Advanced
+namespace Koans.Advanced
 {
     [TestClass]
     public class LambdaExpressions

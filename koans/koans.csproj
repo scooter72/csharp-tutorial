@@ -8,8 +8,8 @@
     <ProjectGuid>{88FCC916-9A2E-489E-AFE0-F1DCD57D351D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>koans2</RootNamespace>
-    <AssemblyName>koans2</AssemblyName>
+    <RootNamespace>Koans</RootNamespace>
+    <AssemblyName>Koans</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -49,19 +49,29 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Constructors.cs" />
-    <Compile Include="DataTypesAndVariables.cs" />
-    <Compile Include="Null.cs" />
-    <Compile Include="Operators.cs" />
+    <Compile Include="AboutAbstract.cs" />
+    <Compile Include="AboutStatic.cs" />
+    <Compile Include="Advanced\DiceProject.cs" />
+    <Compile Include="Advanced\ScoringProject.cs" />
+    <Compile Include="Advanced\LambdaExpressions.cs" />
+    <Compile Include="AboutConstructors.cs" />
+    <Compile Include="AboutDataTypesAndVariables.cs" />
+    <Compile Include="AboutNull.cs" />
+    <Compile Include="AboutOperators.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Objects.cs" />
-    <Compile Include="Arrays.cs" />
-    <Compile Include="Methods.cs" />
-    <Compile Include="Statements.cs" />
-    <Compile Include="Strings.cs" />
+    <Compile Include="AboutObjects.cs" />
+    <Compile Include="AboutArrays.cs" />
+    <Compile Include="AboutMethods.cs" />
+    <Compile Include="AboutStatements.cs" />
+    <Compile Include="AboutStrings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="example_file.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

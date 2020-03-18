@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace koans.Advanced
+namespace Koans.Advanced
 {
     /*
         # Greed is a dice game where you roll up to five dice to accumulate
