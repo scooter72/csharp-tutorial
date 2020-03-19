@@ -64,6 +64,7 @@
     <Compile Include="AboutMethods.cs" />
     <Compile Include="AboutStatements.cs" />
     <Compile Include="AboutStrings.cs" />
+    <Compile Include="Training\FirstNonConsecutive.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
