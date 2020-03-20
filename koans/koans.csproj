@@ -66,6 +66,7 @@
     <Compile Include="AboutStrings.cs" />
     <Compile Include="Training\FirstNonConsecutive.cs" />
     <Compile Include="Training\AlternateCapitalization.cs" />
+    <Compile Include="Training\Divisors.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
