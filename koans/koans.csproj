@@ -68,6 +68,7 @@
     <Compile Include="Training\AlternateCapitalization.cs" />
     <Compile Include="Training\Divisors.cs" />
     <Compile Include="Training\TripleTrouble.cs" />
+    <Compile Include="Training\DivSeven.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
