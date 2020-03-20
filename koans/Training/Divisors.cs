@@ -3,6 +3,18 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Koans.Training
 {
+    /// <summary>
+    /// ------------------------------
+    /// Count the divisors of a number
+    /// ------------------------------
+    /// 
+    /// Count the number of divisors of a positive integer n.
+    /// Examples
+    /// Divisors.CountDivisors(4)  -> 3 -- 1, 2, 4
+    /// Divisors.CountDivisors(5)  -> 2 -- 1, 5
+    /// Divisors.CountDivisors(12) -> 6 -- 1, 2, 3, 4, 6, 12
+    /// Divisors.CountDivisors(30) -> 8 -- 1, 2, 3, 5, 6, 10, 15, 30
+    /// </summary>
     [TestClass]
     public class Divisors
     {
