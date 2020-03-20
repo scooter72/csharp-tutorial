@@ -15,18 +15,25 @@ namespace Koans.Training
         public string[] Capitalize(string s)
         {
             throw new NotImplementedException();
-
-            
+            // your code here
         }
-
-
+        
         [TestMethod]
         public void BasicTest()
         {
-            Assert.IsTrue((new string[2] { "AbCdEf", "aBcDeF" }).SequenceEqual(Capitalize("abcdef")));
-            Assert.IsTrue((new string[2] { "CoDeWaRs", "cOdEwArS" }).SequenceEqual(Capitalize("codewars")));
-            Assert.IsTrue((new string[2] { "AbRaCaDaBrA", "aBrAcAdAbRa" }).SequenceEqual(Capitalize("abracadabra")));
-            Assert.IsTrue((new string[2] { "CoDeWaRrIoRs", "cOdEwArRiOrS" }).SequenceEqual(Capitalize("codewarriors")));
+            Assert.AreEqual(new string[2] { "AbCdEf", "aBcDeF" }, Capitalize("abcdef"));
+            Assert.AreEqual(new string[2] { "CoDeWaRs", "cOdEwArS" }, Capitalize("codewars"));
+            Assert.AreEqual(new string[2] { "AbRaCaDaBrA", "aBrAcAdAbRa" }, Capitalize("abracadabra"));
+            Assert.AreEqual(new string[2] { "CoDeWaRrIoRs", "cOdEwArRiOrS" }, Capitalize("codewarriors"));
+        }
+
+        [TestMethod]
+        public void RandomTest()
+        {
+            var r = new Random();
+            const string letters = "abcdefghijklmnopqrstuvwxyz";
+            string str = new string(Enumerable.Range(1, r.Next(1, 25)).Select(ch => letters[r.Next(0, letters.Length - 1)]).ToArray());
+            Assert.AreEqual(new string[2] { string.Join("", str.Select((ch, i) => i % 2 == 0 ? Char.ToUpper(ch) : ch).ToArray()), string.Join("", str.Select((ch, i) => i % 2 != 0 ? Char.ToUpper(ch) : ch).ToArray()) }, Capitalize(str));
         }
     }
 }

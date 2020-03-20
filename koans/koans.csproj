@@ -67,6 +67,10 @@
     <Compile Include="Training\FirstNonConsecutive.cs" />
     <Compile Include="Training\AlternateCapitalization.cs" />
     <Compile Include="Training\Divisors.cs" />
+    <Compile Include="Training\Solutions\Divisors.cs" />
+    <Compile Include="Training\Solutions\DivSeven.cs" />
+    <Compile Include="Training\Solutions\FirstNonConsecutive.cs" />
+    <Compile Include="Training\Solutions\TripleTrouble.cs" />
     <Compile Include="Training\TripleTrouble.cs" />
     <Compile Include="Training\DivSeven.cs" />
   </ItemGroup>

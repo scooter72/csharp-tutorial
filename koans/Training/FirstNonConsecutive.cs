@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Koans.Training
@@ -13,7 +15,7 @@ namespace Koans.Training
     public class FirstNonConsecutive
     {
 
-        private static object Run(int[] arr)
+        private static object Solution(int[] arr)
         {
             // implement this method
             throw new NotImplementedException();
@@ -22,59 +24,61 @@ namespace Koans.Training
         [TestMethod]
         public void EmptyArrayTest()
         {
-            Assert.IsNull(FirstNonConsecutive.Run(new int[0]));
+            Assert.IsNull(FirstNonConsecutive.Solution(new int[0]));
         }
 
         [TestMethod]
         public void SingleElemntArrayTest()
         {
-            Assert.IsNull(FirstNonConsecutive.Run(new int[] {0}));
+            Assert.IsNull(FirstNonConsecutive.Solution(new int[] {0}));
         }
 
-        [TestMethod]
-        public void SampleTest()
-        {
-            Assert.AreEqual(6, FirstNonConsecutive.Run(new int[] { 1, 2, 3, 4, 6, 7, 8 }));
-        }
-
-        [TestMethod]
-        public void NegativeTest()
-        {
-            Assert.AreEqual(-1, FirstNonConsecutive.Run(new int[] { -3, -1, 0, 1, 2 }));
-        }
+      
+        private Random rnd = new Random();
 
         [TestMethod]
         public void RandomTest()
         {
-            Assert.AreEqual(null, FirstNonConsecutive.Run(new int[] { -6, -5, -4, -3, -2, -1, 0, 1, 2 }));
-            Assert.AreEqual(null, FirstNonConsecutive.Run(new int[] { -10, -9, -8, -7, -6, -5, -4, -3, -2 }));
-            Assert.AreEqual(10, FirstNonConsecutive.Run(new int[] { 4, 5, 6, 7, 8, 10, 11, 12 }));
-            Assert.AreEqual(null, FirstNonConsecutive.Run(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }));
-            Assert.AreEqual(null, FirstNonConsecutive.Run(new int[] { 5, 6, 7, 8, 9, 10, 11, 12, 13 }));
-            Assert.AreEqual(4, FirstNonConsecutive.Run(new int[] { -2, -1, 0, 1, 4, 5, 6 }));
-            Assert.AreEqual(1, FirstNonConsecutive.Run(new int[] { -2, -1, 1, 2, 3, 4, 5, 6 }));
-            Assert.AreEqual(null, FirstNonConsecutive.Run(new int[] { 0, 1, 2, 3, 4, 5, 6, 7 }));
-            Assert.AreEqual(null, FirstNonConsecutive.Run(new int[] { 7, 8, 9, 10, 11, 12, 13, 14, 15 }));
-            Assert.AreEqual(null, FirstNonConsecutive.Run(new int[] { 7, 8, 9, 10, 11, 12, 13, 14 }));
-        }
+            for (int i = 0; i < 10; ++i)
+            {
+                List<int> testList = new List<int>();
+                int offset = rnd.Next(0, 20) - 10;
+                for (int j = 0; j < 20; ++j)
+                {
+                    testList.Add(offset + (rnd.Next(0, 9)));
+                }
+                testList.Sort((a, b) => a - b);
+                testList = testList.Distinct().ToList();
+                Console.WriteLine(string.Join(", ", testList.ToArray()));
+                object first = Solutions.FirstNonConsecutive.Solution(testList.ToArray());
+                object expected = FirstNonConsecutive.Solution(testList.ToArray());
 
-        [TestMethod]
-        public void SequentialTest()
-        {
-            Assert.AreEqual(null, FirstNonConsecutive.Run(new int[] { 1, 2, 3, 4 }));
+                Assert.AreEqual(expected, first);
+            }
         }
 
         [TestMethod]
         public void SimpleTest()
         {
-            Assert.AreEqual(6, FirstNonConsecutive.Run(new int[] { 1, 2, 3, 4, 6, 7, 8 }));
-        }//Assert.AreEqual(0, FirstNonConsecutive.Run(new int[] { -3, -2, 0, 1, 2 }));
-
+            Assert.AreEqual(6, FirstNonConsecutive.Solution(new int[] { 1, 2, 3, 4, 6, 7, 8 }));
+        }
 
         [TestMethod]
         public void ZeroTest()
         {
-            Assert.AreEqual(0, FirstNonConsecutive.Run(new int[] { -3, -2, 0, 1, 2 }));
+            Assert.AreEqual(0, FirstNonConsecutive.Solution(new int[] { -3, -2, 0, 1, 2 }));
+        }
+
+        [TestMethod]
+        public void NegativeTest()
+        {
+            Assert.AreEqual(-1, FirstNonConsecutive.Solution(new int[] { -3, -1, 0, 1, 2 }));
+        }
+
+        [TestMethod]
+        public void SequentialTest()
+        {
+            Assert.AreEqual(null, FirstNonConsecutive.Solution(new int[] { 1, 2, 3, 4 }));
         }
     }
 }
