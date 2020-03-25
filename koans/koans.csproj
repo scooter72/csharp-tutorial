@@ -70,6 +70,7 @@
     <Compile Include="Training\Solutions\Divisors.cs" />
     <Compile Include="Training\Solutions\DivSeven.cs" />
     <Compile Include="Training\Solutions\FirstNonConsecutive.cs" />
+    <Compile Include="Training\Solutions\RemoveDuplicateWords.cs" />
     <Compile Include="Training\Solutions\TripleTrouble.cs" />
     <Compile Include="Training\Solutions\HappyYear.cs" />
     <Compile Include="Training\Solutions\ValidTeamsAndNames.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Training\TripleTrouble.cs" />
     <Compile Include="Training\DivSeven.cs" />
     <Compile Include="Training\HappyYear.cs" />
+    <Compile Include="Training\RemoveDuplicateWords.cs" />
     <Compile Include="Training\ValidTeamsAndNames.cs" />
     <Compile Include="Training\VowelCount.cs" />
   </ItemGroup>
