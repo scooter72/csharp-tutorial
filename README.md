@@ -9,3 +9,5 @@ Mini projects
 
 # Training 
 Set of problems with tetst and a solutions folder
+
+TEST
