@@ -11,7 +11,6 @@ namespace Koans.Training
     [TestClass]
     public class SimpleList : IList
     {
-
         //
         // Summary:
         //     Gets or sets the element at the specified index.
