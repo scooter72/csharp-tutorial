@@ -82,7 +82,6 @@
     <Compile Include="Training\HappyYear.cs" />
     <Compile Include="Training\RemoveDuplicateWords.cs" />
     <Compile Include="Training\SelectiveFearOfNumbers.cs" />
-    <Compile Include="Training\UnitTest1.cs" />
     <Compile Include="Training\SimpleList.cs" />
     <Compile Include="Training\ValidTeamsAndNames.cs" />
     <Compile Include="Training\VowelCount.cs" />
